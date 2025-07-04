@@ -1,0 +1,29 @@
+[
+  {
+    "Id": 1,
+    "name": "John Smith",
+    "organization": "Green Earth Foundation",
+    "email": "john.smith@greenearth.org",
+    "interest": "education",
+    "newsletter": true,
+    "timestamp": "2024-01-15T10:30:00Z"
+  },
+  {
+    "Id": 2,
+    "name": "Sarah Johnson",
+    "organization": "Tech Innovators Inc",
+    "email": "sarah@techinnovators.com",
+    "interest": "integration",
+    "newsletter": false,
+    "timestamp": "2024-01-14T14:45:00Z"
+  },
+  {
+    "Id": 3,
+    "name": "Michael Chen",
+    "organization": "City Health Department",
+    "email": "m.chen@cityhealth.gov",
+    "interest": "adoption",
+    "newsletter": true,
+    "timestamp": "2024-01-13T09:15:00Z"
+  }
+]

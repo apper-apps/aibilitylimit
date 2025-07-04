@@ -1,0 +1,138 @@
+[
+  {
+    "Id": 1,
+    "title": "AI Fundamentals for Leaders",
+    "description": "A comprehensive introduction to artificial intelligence for decision-makers and organizational leaders. Learn the basics of AI, its applications, and how to make strategic decisions about AI adoption.",
+    "level": "beginner",
+    "duration": "2 days",
+    "price": 1200,
+    "topics": [
+      "Introduction to AI and Machine Learning",
+      "AI Applications in Business",
+      "Ethical AI and Responsible Implementation",
+      "AI Strategy and Planning",
+      "Change Management for AI Adoption",
+      "ROI and Success Metrics"
+    ],
+    "nextStartDate": "2024-02-15T09:00:00Z"
+  },
+  {
+    "Id": 2,
+    "title": "Machine Learning Implementation Workshop",
+    "description": "Hands-on workshop for technical teams to implement machine learning solutions. Learn to build, train, and deploy ML models using popular frameworks and tools.",
+    "level": "intermediate",
+    "duration": "3 days",
+    "price": 2100,
+    "topics": [
+      "Machine Learning Fundamentals",
+      "Data Preparation and Feature Engineering",
+      "Model Selection and Training",
+      "Model Evaluation and Validation",
+      "Deployment and Monitoring",
+      "MLOps Best Practices"
+    ],
+    "nextStartDate": "2024-02-22T09:00:00Z"
+  },
+  {
+    "Id": 3,
+    "title": "Advanced AI Systems Architecture",
+    "description": "Deep dive into designing and implementing enterprise-grade AI systems. Learn about scalability, performance optimization, and advanced AI architectures.",
+    "level": "advanced",
+    "duration": "4 days",
+    "price": 2800,
+    "topics": [
+      "AI System Design Principles",
+      "Distributed Machine Learning",
+      "AI Pipeline Optimization",
+      "Advanced Model Architectures",
+      "Scalability and Performance",
+      "Security and Governance"
+    ],
+    "nextStartDate": "2024-03-01T09:00:00Z"
+  },
+  {
+    "Id": 4,
+    "title": "Natural Language Processing for Business",
+    "description": "Learn to implement NLP solutions for business applications including chatbots, document analysis, and sentiment analysis.",
+    "level": "intermediate",
+    "duration": "3 days",
+    "price": 2200,
+    "topics": [
+      "NLP Fundamentals",
+      "Text Processing and Analysis",
+      "Sentiment Analysis",
+      "Chatbot Development",
+      "Document Understanding",
+      "NLP Model Fine-tuning"
+    ],
+    "nextStartDate": "2024-03-08T09:00:00Z"
+  },
+  {
+    "Id": 5,
+    "title": "Computer Vision Applications",
+    "description": "Practical course on implementing computer vision solutions for real-world applications including image recognition, object detection, and quality control.",
+    "level": "intermediate",
+    "duration": "3 days",
+    "price": 2300,
+    "topics": [
+      "Computer Vision Fundamentals",
+      "Image Processing Techniques",
+      "Object Detection and Recognition",
+      "Quality Control Systems",
+      "Real-time Processing",
+      "Model Deployment"
+    ],
+    "nextStartDate": "2024-03-15T09:00:00Z"
+  },
+  {
+    "Id": 6,
+    "title": "AI for Non-Profits: Getting Started",
+    "description": "Tailored course for non-profit organizations to understand and implement AI solutions that amplify their mission and impact.",
+    "level": "beginner",
+    "duration": "2 days",
+    "price": 900,
+    "topics": [
+      "AI in Non-Profit Context",
+      "Donor Management with AI",
+      "Program Impact Measurement",
+      "Volunteer Engagement Tools",
+      "Grant Writing Assistance",
+      "Budget-Friendly AI Solutions"
+    ],
+    "nextStartDate": "2024-03-22T09:00:00Z"
+  },
+  {
+    "Id": 7,
+    "title": "Predictive Analytics Masterclass",
+    "description": "Master the art of predictive analytics using AI and machine learning techniques to forecast trends and make data-driven decisions.",
+    "level": "advanced",
+    "duration": "4 days",
+    "price": 3000,
+    "topics": [
+      "Advanced Statistical Methods",
+      "Time Series Analysis",
+      "Forecasting Models",
+      "Risk Assessment",
+      "Business Intelligence Integration",
+      "Advanced Visualization"
+    ],
+    "nextStartDate": "2024-03-29T09:00:00Z"
+  },
+  {
+    "Id": 8,
+    "title": "AI Ethics and Governance",
+    "description": "Essential course on implementing ethical AI practices, governance frameworks, and ensuring responsible AI deployment in organizations.",
+    "level": "intermediate",
+    "duration": "2 days",
+    "price": 1600,
+    "topics": [
+      "AI Ethics Principles",
+      "Bias Detection and Mitigation",
+      "Governance Frameworks",
+      "Regulatory Compliance",
+      "Transparency and Explainability",
+      "Stakeholder Engagement"
+    ],
+    "nextStartDate": "2024-04-05T09:00:00Z"
+  }
+]

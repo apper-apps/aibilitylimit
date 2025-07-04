@@ -1,0 +1,47 @@
+[
+  {
+    "Id": 1,
+    "name": "AI Education & Training",
+    "icon": "GraduationCap",
+    "description": "Comprehensive AI education programs designed to build foundational understanding and practical skills across your organization. From executive briefings to hands-on technical training, we ensure your team is equipped with the knowledge needed for successful AI adoption.",
+    "features": [
+      "Executive AI awareness workshops",
+      "Technical team training programs",
+      "Custom curriculum development",
+      "Hands-on practical exercises",
+      "Industry-specific use cases",
+      "Certification programs"
+    ],
+    "cta": "Explore Education Programs"
+  },
+  {
+    "Id": 2,
+    "name": "AI Integration & Implementation",
+    "icon": "Cog",
+    "description": "End-to-end AI solution implementation services that seamlessly integrate with your existing systems and workflows. We handle everything from strategy development to deployment, ensuring minimal disruption and maximum impact.",
+    "features": [
+      "AI strategy development",
+      "System architecture design",
+      "Custom AI solution development",
+      "Integration with existing systems",
+      "Performance optimization",
+      "Quality assurance and testing"
+    ],
+    "cta": "Start Integration Process"
+  },
+  {
+    "Id": 3,
+    "name": "AI Adoption & Ongoing Support",
+    "icon": "TrendingUp",
+    "description": "Comprehensive support services to ensure successful AI adoption and long-term success. From change management to continuous optimization, we provide the ongoing support your organization needs to thrive with AI.",
+    "features": [
+      "Change management support",
+      "User training and onboarding",
+      "Performance monitoring",
+      "Continuous optimization",
+      "Technical support and maintenance",
+      "Success metrics and reporting"
+    ],
+    "cta": "Get Ongoing Support"
+  }
+]
