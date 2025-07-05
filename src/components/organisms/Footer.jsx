@@ -1,7 +1,10 @@
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import Button from '@/components/atoms/Button'
-import ApperIcon from '@/components/ApperIcon'
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import React from "react";
+import ApperIcon from "@/components/ApperIcon";
+import Button from "@/components/atoms/Button";
+import Contact from "@/components/pages/Contact";
+import Services from "@/components/pages/Services";
 
 const Footer = () => {
   const quickLinks = [
@@ -27,26 +30,22 @@ const Footer = () => {
   ]
   
   return (
-<footer className="bg-black text-white relative overflow-hidden">
-      {/* Premium accent lines */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-50"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<footer className="bg-gray-50 border-t border-gray-200">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Newsletter Section */}
-        <div className="py-16 border-b border-gray-800">
+        <div className="py-12 border-b border-gray-200">
           <div className="text-center">
-            <h3 className="text-3xl font-playfair font-bold mb-6">Stay Ahead of AI Innovation</h3>
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Receive exclusive insights on AI trends, implementation strategies, and industry breakthroughs 
-              delivered directly to your inbox.
+            <h3 className="text-2xl font-medium text-gray-900 mb-4">Stay updated</h3>
+            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+              Get the latest insights on AI trends, implementation strategies, and industry developments.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-6 py-4 rounded-xl border border-gray-700 bg-gray-900/50 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent backdrop-blur-sm"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-full border border-gray-300 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-google-blue focus:border-google-blue"
               />
-              <Button variant="premium" size="md" className="btn-glow">
+              <Button className="bg-google-blue hover:bg-blue-600 text-white rounded-full px-6">
                 Subscribe
               </Button>
             </div>
@@ -58,24 +57,24 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="space-y-4">
-              <Link to="/" className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                  <ApperIcon name="Brain" size={24} className="text-white" />
+<Link to="/" className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-google-blue rounded-full flex items-center justify-center">
+                  <ApperIcon name="Brain" size={20} className="text-white" />
                 </div>
-                <span className="text-xl font-bold">AIbility Pro</span>
+                <span className="text-xl font-medium text-gray-900">AI Solutions</span>
               </Link>
-              <p className="text-gray-300 text-sm">
-                Expert AI consultants helping organizations understand, integrate, and adopt AI solutions for sustainable growth and innovation.
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Expert AI consultants helping organizations understand, implement, and benefit from artificial intelligence.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-3">
                 {socialLinks.map((link) => (
                   <motion.a
                     key={link.name}
                     href={link.href}
-                    whileHover={{ scale: 1.1 }}
-                    className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-200"
+                    whileHover={{ scale: 1.05 }}
+                    className="w-9 h-9 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition-colors duration-200"
                   >
-                    <ApperIcon name={link.icon} size={20} />
+                    <ApperIcon name={link.icon} size={18} className="text-gray-600" />
                   </motion.a>
                 ))}
               </div>
@@ -83,13 +82,13 @@ const Footer = () => {
             
             {/* Quick Links */}
             <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
+<h4 className="font-medium text-gray-900 mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                      className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
                     >
                       {link.name}
                     </Link>
@@ -100,13 +99,13 @@ const Footer = () => {
             
             {/* Services */}
             <div>
-              <h4 className="font-semibold mb-4">Services</h4>
+<h4 className="font-medium text-gray-900 mb-4">Services</h4>
               <ul className="space-y-2">
                 {services.map((service) => (
                   <li key={service.name}>
                     <Link
                       to={service.href}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                      className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm"
                     >
                       {service.name}
                     </Link>
@@ -117,11 +116,11 @@ const Footer = () => {
             
             {/* Contact Info */}
             <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-sm text-gray-300">
+<h4 className="font-medium text-gray-900 mb-4">Contact</h4>
+              <div className="space-y-2 text-sm text-gray-600">
                 <div className="flex items-center space-x-2">
                   <ApperIcon name="Mail" size={16} />
-                  <span>info@aibility.pro</span>
+                  <span>info@aisolutions.com</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <ApperIcon name="Phone" size={16} />
@@ -129,33 +128,37 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <ApperIcon name="MapPin" size={16} />
-                  <span>Toronto, ON, Canada</span>
+                  <span>Mountain View, CA</span>
                 </div>
               </div>
               <div className="mt-4">
-                <Button variant="outline" size="sm" className="w-full">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full border-gray-300 text-gray-700 hover:border-google-blue hover:text-google-blue rounded-full"
+                >
                   <ApperIcon name="Calendar" size={16} />
-                  Schedule Call
+                  Schedule call
                 </Button>
               </div>
             </div>
           </div>
         </div>
         
-        {/* Bottom Bar */}
-        <div className="py-6 border-t border-gray-700">
+{/* Bottom Bar */}
+        <div className="py-6 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
-              © 2024 AIbility Pro. All rights reserved.
+            <p className="text-gray-600 text-sm">
+              © 2024 AI Solutions. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-300 hover:text-white text-sm transition-colors">
+              <Link to="/privacy" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-300 hover:text-white text-sm transition-colors">
+              <Link to="/terms" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="text-gray-300 hover:text-white text-sm transition-colors">
+              <Link to="/cookies" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
                 Cookie Policy
               </Link>
             </div>

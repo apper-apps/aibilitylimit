@@ -38,31 +38,30 @@ const Header = () => {
   
   return (
 <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? 'glass-effect shadow-premium' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white/95 backdrop-blur-sm border-b border-gray-200' : 'bg-white'
       }`}
-      initial={{ y: -100 }}
+      initial={{ y: 0 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-<Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-gradient-to-br from-black to-gray-800 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
-              <ApperIcon name="Brain" size={28} className="text-white" />
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-google-blue rounded-full flex items-center justify-center">
+              <ApperIcon name="Brain" size={20} className="text-white" />
             </div>
-            <span className="text-2xl font-playfair font-bold text-black">AIbility Pro</span>
+            <span className="text-xl font-normal text-gray-900">AI Solutions</span>
           </Link>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              <Link
+<Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-primary ${
-                  location.pathname === item.href ? 'text-primary' : 'text-gray-700'
+                className={`text-sm font-medium transition-colors duration-200 hover:text-gray-900 ${
+                  location.pathname === item.href ? 'text-gray-900' : 'text-gray-600'
                 }`}
               >
                 {item.name}
@@ -71,19 +70,21 @@ const Header = () => {
           </nav>
           
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3">
             <Button
               variant="outline"
               size="sm"
               onClick={() => scrollToSection('contact')}
+              className="border-gray-300 text-gray-700 hover:border-gray-400 rounded-full px-4 py-2"
             >
               Get Started
             </Button>
             <Button
               size="sm"
               onClick={() => scrollToSection('contact')}
+              className="bg-google-blue hover:bg-blue-600 text-white rounded-full px-4 py-2"
             >
-              Book Consultation
+              Contact us
             </Button>
           </div>
           

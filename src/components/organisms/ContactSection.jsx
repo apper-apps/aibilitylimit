@@ -107,29 +107,21 @@ const ContactSection = () => {
   }
   
   return (
-<section id="contact" className="py-24 bg-black relative overflow-hidden">
-      {/* Premium background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-accent/30 to-transparent"></div>
-        <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-accent-blue/20 to-transparent"></div>
-        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-purple/20 to-transparent"></div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+<section id="contact" className="py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="text-center mb-20"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-playfair font-bold text-white mb-8 heading-premium">
-            Ready to Start Your <span className="gradient-text-accent">AI Journey?</span>
+          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-6">
+            Get in touch
           </h2>
-          <div className="w-32 h-1 bg-gradient-to-r from-accent to-accent-blue mx-auto mb-8"></div>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
-            Connect with our elite AI consultants to explore transformative opportunities and 
-            discover how we can elevate your organization through cutting-edge artificial intelligence solutions.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ready to explore how AI can transform your organization? 
+            Let's discuss your needs and find the right solution.
           </p>
         </motion.div>
         
@@ -141,8 +133,8 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <Card>
-              <h3 className="text-2xl font-bold text-secondary mb-6">Get Started Today</h3>
+<Card className="bg-white rounded-lg border border-gray-200 p-8">
+              <h3 className="text-2xl font-medium text-gray-900 mb-6">Send us a message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <FormField
                   type="input"
@@ -179,7 +171,7 @@ const ContactSection = () => {
                 
                 <FormField
                   type="select"
-                  label="Primary Interest"
+                  label="How can we help?"
                   name="interest"
                   value={formData.interest}
                   onChange={handleInputChange}
@@ -205,7 +197,7 @@ const ContactSection = () => {
                     id="newsletter"
                     checked={formData.newsletter}
                     onChange={handleCheckboxChange}
-                    className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+                    className="w-4 h-4 text-google-blue border-gray-300 rounded focus:ring-google-blue"
                   />
                   <label htmlFor="newsletter" className="text-sm text-gray-600">
                     Subscribe to our AI insights newsletter
@@ -217,10 +209,10 @@ const ContactSection = () => {
                   size="lg"
                   loading={loading}
                   disabled={loading}
-                  className="w-full"
+                  className="w-full bg-google-blue hover:bg-blue-600 text-white rounded-full"
                 >
                   <ApperIcon name="Send" size={20} />
-                  Send Message
+                  Send message
                 </Button>
               </form>
             </Card>
@@ -234,59 +226,59 @@ const ContactSection = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <Card>
-              <h3 className="text-2xl font-bold text-secondary mb-6">Contact Information</h3>
-              <div className="space-y-4">
+<Card className="bg-white rounded-lg border border-gray-200 p-8">
+              <h3 className="text-2xl font-medium text-gray-900 mb-6">Contact information</h3>
+              <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                    <ApperIcon name="Mail" size={20} className="text-white" />
+                  <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+                    <ApperIcon name="Mail" size={20} className="text-gray-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-secondary">Email</h4>
-                    <p className="text-gray-600">info@aibility.pro</p>
+                    <h4 className="font-medium text-gray-900">Email</h4>
+                    <p className="text-gray-600">info@aisolutions.com</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                    <ApperIcon name="Phone" size={20} className="text-white" />
+                  <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+                    <ApperIcon name="Phone" size={20} className="text-gray-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-secondary">Phone</h4>
+                    <h4 className="font-medium text-gray-900">Phone</h4>
                     <p className="text-gray-600">+1 (555) 123-4567</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                    <ApperIcon name="MapPin" size={20} className="text-white" />
+                  <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+                    <ApperIcon name="MapPin" size={20} className="text-gray-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-secondary">Location</h4>
-                    <p className="text-gray-600">Toronto, ON, Canada</p>
+                    <h4 className="font-medium text-gray-900">Location</h4>
+                    <p className="text-gray-600">Mountain View, CA</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                    <ApperIcon name="Clock" size={20} className="text-white" />
+                  <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+                    <ApperIcon name="Clock" size={20} className="text-gray-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-secondary">Response Time</h4>
+                    <h4 className="font-medium text-gray-900">Response time</h4>
                     <p className="text-gray-600">Within 24 hours</p>
                   </div>
                 </div>
               </div>
             </Card>
             
-            <Card className="bg-gradient-to-br from-primary to-accent text-white">
-              <h3 className="text-2xl font-bold mb-4">Free Consultation</h3>
+            <Card className="bg-google-blue text-white rounded-lg p-8">
+              <h3 className="text-2xl font-medium mb-4">Free consultation</h3>
               <p className="text-lg opacity-90 mb-6">
-                Book a free 30-minute consultation to discuss your AI needs and explore how we can help your organization.
+                Book a free 30-minute consultation to discuss your AI needs and explore how we can help.
               </p>
-              <Button variant="white" size="lg" className="w-full">
+              <Button variant="white" size="lg" className="w-full bg-white text-google-blue hover:bg-gray-50 rounded-full">
                 <ApperIcon name="Calendar" size={20} />
-                Schedule Free Call
+                Schedule call
               </Button>
             </Card>
           </motion.div>
