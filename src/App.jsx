@@ -49,17 +49,19 @@ function App() {
         </Routes>
       </Layout>
       
-      <ToastContainer
+<ToastContainer
         position="top-right"
-        autoClose={3000}
+        autoClose={4000}
         hideProgressBar={false}
-        newestOnTop={false}
+        newestOnTop={true}
         closeOnClick
         rtl={false}
         pauseOnFocusLoss
         draggable
         pauseOnHover
         theme="colored"
+        className="mt-16"
+        toastClassName="font-inter"
       />
     </motion.div>
   )

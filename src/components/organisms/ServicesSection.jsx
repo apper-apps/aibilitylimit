@@ -50,12 +50,12 @@ const ServicesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-black text-secondary mb-6">
-            Our Core <span className="gradient-text">AI Services</span>
+<h2 className="text-4xl md:text-5xl font-black text-secondary mb-6">
+            Boutique <span className="gradient-text">AI Solutions</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We provide comprehensive AI solutions tailored to your organization's needs, 
-            from initial education to full implementation and ongoing support.
+            Our personalized approach ensures every AI solution is carefully crafted to meet your 
+            unique organizational goals, with dedicated expertise and ongoing strategic partnership.
           </p>
         </motion.div>
         

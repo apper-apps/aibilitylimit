@@ -48,7 +48,7 @@ html {
 
 /* Gradient text utilities */
 .gradient-text {
-  background: linear-gradient(135deg, #0066FF 0%, #00D4FF 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -57,16 +57,16 @@ html {
 /* Glass effect utilities */
 .glass-effect {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Hero background animation */
 .hero-gradient {
-  background: linear-gradient(135deg, #001E4D 0%, #0066FF 50%, #00D4FF 100%);
+  background: linear-gradient(135deg, #1e293b 0%, #6366f1 50%, #8b5cf6 100%);
   background-size: 200% 200%;
-  animation: gradientShift 8s ease infinite;
+  animation: gradientShift 10s ease infinite;
 }
 
 @keyframes gradientShift {

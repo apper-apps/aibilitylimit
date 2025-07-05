@@ -13,12 +13,12 @@ const Button = forwardRef(({
 }, ref) => {
   const baseClasses = 'font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2'
   
-  const variants = {
-    primary: 'bg-gradient-to-r from-primary to-accent text-white hover:brightness-110 focus:ring-primary shadow-lg hover:shadow-xl',
-    secondary: 'bg-gradient-to-r from-secondary to-primary text-white hover:brightness-110 focus:ring-secondary shadow-lg hover:shadow-xl',
-    outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary',
-    ghost: 'text-primary hover:bg-primary hover:bg-opacity-10 focus:ring-primary',
-    white: 'bg-white text-secondary border border-gray-200 hover:bg-gray-50 focus:ring-gray-300 shadow-sm hover:shadow-md',
+const variants = {
+    primary: 'bg-gradient-to-r from-primary to-accent text-white hover:from-primary/90 hover:to-accent/90 focus:ring-primary/50 shadow-lg hover:shadow-xl transition-all duration-300',
+    secondary: 'bg-gradient-to-r from-secondary to-primary text-white hover:from-secondary/90 hover:to-primary/90 focus:ring-secondary/50 shadow-lg hover:shadow-xl transition-all duration-300',
+    outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary/30 transition-all duration-200',
+    ghost: 'text-primary hover:bg-primary/10 focus:ring-primary/30 transition-all duration-200',
+    white: 'bg-white text-secondary border border-gray-200 hover:bg-gray-50 hover:border-gray-300 focus:ring-primary/30 shadow-sm hover:shadow-md transition-all duration-200',
   }
   
   const sizes = {

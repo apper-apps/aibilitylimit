@@ -30,6 +30,7 @@ const coursesSlice = createSlice({
     currentCourse: null,
     loading: false,
     error: null,
+    enrollments: [],
   },
   reducers: {
     clearError: (state) => {
@@ -62,7 +63,7 @@ const coursesSlice = createSlice({
         state.loading = false
         state.error = action.payload
       })
-  },
+},
 })
 
 export const { clearError } = coursesSlice.actions

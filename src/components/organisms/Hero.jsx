@@ -39,9 +39,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Transform Your Organization with
+Boutique AI Consulting for
             <span className="block bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-              Expert AI Consulting
+              Forward-Thinking Organizations
             </span>
           </motion.h1>
           
@@ -51,9 +51,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            We help non-profits, NGOs, government organizations, and businesses 
-            <strong> understand, integrate, and adopt AI solutions</strong> that drive 
-            real impact and sustainable growth.
+            Our expert team provides <strong>personalized AI strategy and implementation</strong> 
+            for organizations ready to harness artificial intelligence for meaningful impact and competitive advantage.
           </motion.p>
           
           <motion.div

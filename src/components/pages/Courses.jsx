@@ -1,21 +1,23 @@
-import { motion } from 'framer-motion'
-import { useSelector, useDispatch } from 'react-redux'
-import { useEffect, useState } from 'react'
-import { fetchCourses } from '@/store/coursesSlice'
-import { Link } from 'react-router-dom'
-import Card from '@/components/molecules/Card'
-import Button from '@/components/atoms/Button'
-import Badge from '@/components/atoms/Badge'
-import ApperIcon from '@/components/ApperIcon'
-import Loading from '@/components/ui/Loading'
-import Error from '@/components/ui/Error'
-import Empty from '@/components/ui/Empty'
-import FilterTabs from '@/components/molecules/FilterTabs'
-import SearchBar from '@/components/molecules/SearchBar'
+import { motion } from "framer-motion";
+import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { enrollInCourse } from "@/store/courseBookingsSlice";
+import { Link } from "react-router-dom";
+import { fetchCourses } from "@/store/coursesSlice";
+import ApperIcon from "@/components/ApperIcon";
+import Badge from "@/components/atoms/Badge";
+import Button from "@/components/atoms/Button";
+import Empty from "@/components/ui/Empty";
+import Error from "@/components/ui/Error";
+import Loading from "@/components/ui/Loading";
+import FilterTabs from "@/components/molecules/FilterTabs";
+import SearchBar from "@/components/molecules/SearchBar";
+import Card from "@/components/molecules/Card";
 
 const Courses = () => {
-  const dispatch = useDispatch()
+const dispatch = useDispatch()
   const { courses, loading, error } = useSelector(state => state.courses)
+  const { loading: enrollmentLoading } = useSelector(state => state.courseBookings)
   const [filteredCourses, setFilteredCourses] = useState([])
   const [activeFilter, setActiveFilter] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
@@ -57,6 +59,19 @@ const Courses = () => {
       case 'intermediate': return 'warning'
       case 'advanced': return 'error'
       default: return 'default'
+    }
+}
+  
+  const handleQuickEnroll = (course) => {
+    if (window.confirm(`Quick enroll in "${course.title}"?`)) {
+      dispatch(enrollInCourse({
+        courseId: course.Id,
+        participantData: {
+          name: 'Demo User',
+          email: 'user@example.com',
+          enrollmentDate: new Date().toISOString()
+        }
+      }))
     }
   }
   
@@ -191,7 +206,12 @@ const Courses = () => {
                             View Details
                           </Button>
                         </Link>
-                        <Button variant="outline" size="sm">
+<Button 
+                          variant="outline" 
+                          size="sm"
+                          onClick={() => handleQuickEnroll(course)}
+                          loading={enrollmentLoading}
+                        >
                           <ApperIcon name="BookOpen" size={14} />
                           Enroll
                         </Button>

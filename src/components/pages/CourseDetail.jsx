@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { fetchCourseById } from '@/store/coursesSlice'
+import { enrollInCourse, downloadSyllabus } from '@/store/courseBookingsSlice'
 import Card from '@/components/molecules/Card'
 import Button from '@/components/atoms/Button'
 import Badge from '@/components/atoms/Badge'
@@ -14,6 +15,7 @@ const CourseDetail = () => {
   const { id } = useParams()
   const dispatch = useDispatch()
   const { currentCourse: course, loading, error } = useSelector(state => state.courses)
+  const { loading: enrollmentLoading, downloadingList } = useSelector(state => state.courseBookings)
   
   useEffect(() => {
     dispatch(fetchCourseById(parseInt(id)))
@@ -56,6 +58,23 @@ const CourseDetail = () => {
       case 'advanced': return 'error'
       default: return 'default'
     }
+}
+  
+  const handleEnrollment = () => {
+    if (window.confirm(`Are you sure you want to enroll in "${course.title}"?`)) {
+      dispatch(enrollInCourse({
+        courseId: course.Id,
+        participantData: {
+          name: 'Demo User',
+          email: 'user@example.com',
+          enrollmentDate: new Date().toISOString()
+        }
+      }))
+    }
+  }
+  
+  const handleSyllabusDownload = () => {
+    dispatch(downloadSyllabus(course.Id))
   }
   
   return (
@@ -128,11 +147,22 @@ const CourseDetail = () => {
               </div>
               
               <div className="space-y-3">
-                <Button size="lg" className="w-full">
+<Button 
+                  size="lg" 
+                  className="w-full" 
+                  onClick={handleEnrollment}
+                  loading={enrollmentLoading}
+                >
                   <ApperIcon name="CreditCard" size={20} />
                   Enroll Now
                 </Button>
-                <Button size="lg" variant="outline" className="w-full">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="w-full"
+                  onClick={handleSyllabusDownload}
+                  loading={downloadingList.includes(course.Id)}
+                >
                   <ApperIcon name="Download" size={20} />
                   Download Syllabus
                 </Button>
@@ -252,10 +282,12 @@ const CourseDetail = () => {
                   <p className="text-sm opacity-90 mb-4">
                     Have questions about this course or need a custom training program?
                   </p>
-                  <Button variant="white" size="sm" className="w-full">
-                    <ApperIcon name="MessageCircle" size={16} />
-                    Contact Us
-                  </Button>
+<Link to="/contact">
+                    <Button variant="white" size="sm" className="w-full">
+                      <ApperIcon name="MessageCircle" size={16} />
+                      Contact Us
+                    </Button>
+                  </Link>
                 </Card>
               </motion.div>
             </div>

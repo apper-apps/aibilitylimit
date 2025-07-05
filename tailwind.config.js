@@ -5,17 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
+extend: {
       colors: {
-        primary: '#0066FF',
-        secondary: '#001E4D',
-        accent: '#00D4FF',
+        primary: '#6366f1',
+        secondary: '#1e293b',
+        accent: '#8b5cf6',
         surface: '#FFFFFF',
-        background: '#F8FAFB',
-        success: '#00C851',
-        warning: '#FFB347',
-        error: '#FF4444',
-        info: '#33B5E5',
+        background: '#f8fafc',
+        success: '#10b981',
+        warning: '#f59e0b',
+        error: '#ef4444',
+        info: '#3b82f6',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

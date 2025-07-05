@@ -41,12 +41,12 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-black text-secondary mb-6">
+<h2 className="text-4xl md:text-5xl font-black text-secondary mb-6">
             About <span className="gradient-text">AIbility Pro</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We're a team of AI experts dedicated to helping organizations harness the power of 
-            artificial intelligence for positive impact and sustainable growth.
+            We're a boutique consultancy of AI specialists providing personalized guidance and 
+            hands-on expertise to help organizations successfully navigate their AI transformation journey.
           </p>
         </motion.div>
         
@@ -79,22 +79,21 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-3xl font-bold text-secondary mb-6">Our Story</h3>
+<h3 className="text-3xl font-bold text-secondary mb-6">Our Boutique Approach</h3>
             <div className="space-y-4 text-gray-600">
               <p>
-                Founded in 2018, AIbility Pro emerged from a simple observation: while AI technology 
-                was advancing rapidly, many organizations struggled to understand how to implement 
-                it effectively and ethically.
+                Founded in 2018, AIbility Pro emerged as a boutique consultancy focused on delivering 
+                personalized AI solutions. We believe that successful AI adoption requires more than 
+                technology—it requires deep understanding of your unique organizational context.
               </p>
               <p>
-                We bridge this gap by providing comprehensive AI consulting services that go beyond 
-                technical implementation. We focus on education, practical integration, and ongoing 
-                support to ensure sustainable AI adoption.
+                Our small, expert team works closely with each client to develop customized strategies 
+                that align AI capabilities with business objectives. We prioritize quality over quantity, 
+                ensuring every engagement receives our full attention and expertise.
               </p>
               <p>
-                Our team combines deep technical expertise with extensive experience in organizational 
-                change management, making us uniquely positioned to help organizations navigate their 
-                AI transformation journey.
+                This boutique approach allows us to build lasting partnerships with our clients, 
+                providing ongoing strategic guidance as AI technology continues to evolve and mature.
               </p>
             </div>
           </motion.div>
@@ -105,15 +104,15 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <Card className="bg-gradient-to-br from-primary to-accent text-white">
+<Card className="bg-gradient-to-br from-primary to-accent text-white">
               <h4 className="text-xl font-bold mb-4">Our Mission</h4>
               <p className="text-lg opacity-90 mb-6">
-                To democratize AI adoption by making advanced artificial intelligence accessible, 
-                understandable, and actionable for organizations of all sizes and sectors.
+                To provide exceptional, personalized AI consulting that empowers organizations 
+                to confidently embrace artificial intelligence and achieve transformational results.
               </p>
               <div className="flex items-center gap-3">
                 <ApperIcon name="Target" size={20} />
-                <span className="font-medium">Empowering positive impact through AI</span>
+                <span className="font-medium">Excellence in every engagement</span>
               </div>
             </Card>
           </motion.div>
