@@ -4,8 +4,8 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-extend: {
+theme: {
+    extend: {
       colors: {
         'google-blue': '#4285f4',
         'google-red': '#ea4335',
