@@ -1,11 +1,11 @@
 [
   {
-    "Id": 1,
+"Id": 1,
     "name": "AI Education & Training",
     "icon": "GraduationCap",
-    "description": "Comprehensive AI education programs designed to build foundational understanding and practical skills across your organization. From executive briefings to hands-on technical training, we ensure your team is equipped with the knowledge needed for successful AI adoption.",
+    "description": "Comprehensive AI education programs including our flagship 'AI Intro to Leaders' course. We build foundational understanding and practical skills across your organization, from executive briefings to hands-on technical training, ensuring your team is equipped with the knowledge needed for successful AI adoption.",
     "features": [
-      "Executive AI awareness workshops",
+      "AI Intro to Leaders executive course",
       "Technical team training programs",
       "Custom curriculum development",
       "Hands-on practical exercises",
@@ -15,29 +15,29 @@
     "cta": "Explore Education Programs"
   },
   {
-    "Id": 2,
-    "name": "AI Integration & Implementation",
+"Id": 2,
+    "name": "AI Strategy & Integration",
     "icon": "Cog",
-    "description": "End-to-end AI solution implementation services that seamlessly integrate with your existing systems and workflows. We handle everything from strategy development to deployment, ensuring minimal disruption and maximum impact.",
+    "description": "End-to-end AI solution implementation services including strategic AI planning, policy building, and seamless integrations. We handle everything from AI strategy development to deployment of AI agents and chatbots, ensuring minimal disruption and maximum impact.",
     "features": [
-      "AI strategy development",
-      "System architecture design",
-      "Custom AI solution development",
-      "Integration with existing systems",
-      "Performance optimization",
-      "Quality assurance and testing"
+      "AI Strategy Building workshops",
+      "AI Policy Building and governance",
+      "AI integrations with existing systems",
+      "AI Agents and Chatbots development",
+      "Custom AI solution implementation",
+      "Performance optimization and monitoring"
     ],
     "cta": "Start Integration Process"
   },
   {
-    "Id": 3,
+"Id": 3,
     "name": "AI Adoption & Ongoing Support",
     "icon": "TrendingUp",
-    "description": "Comprehensive support services to ensure successful AI adoption and long-term success. From change management to continuous optimization, we provide the ongoing support your organization needs to thrive with AI.",
+    "description": "Comprehensive support services to ensure successful AI adoption and long-term success. From change management to continuous optimization, we provide the ongoing support your organization needs to thrive with AI solutions, chatbots, and integrated systems.",
     "features": [
       "Change management support",
       "User training and onboarding",
-      "Performance monitoring",
+      "AI system performance monitoring",
       "Continuous optimization",
       "Technical support and maintenance",
       "Success metrics and reporting"

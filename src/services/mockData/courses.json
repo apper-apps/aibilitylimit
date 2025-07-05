@@ -1,16 +1,16 @@
 [
   {
-    "Id": 1,
-    "title": "AI Fundamentals for Leaders",
-    "description": "A comprehensive introduction to artificial intelligence for decision-makers and organizational leaders. Learn the basics of AI, its applications, and how to make strategic decisions about AI adoption.",
+"Id": 1,
+    "title": "AI Intro to Leaders",
+    "description": "AiBility's flagship comprehensive introduction to artificial intelligence for decision-makers and organizational leaders. Learn the basics of AI, its applications, and how to make strategic decisions about AI adoption in the Canadian business landscape.",
     "level": "beginner",
     "duration": "2 days",
     "price": 1200,
     "topics": [
       "Introduction to AI and Machine Learning",
-      "AI Applications in Business",
+      "AI Applications in Canadian Business",
       "Ethical AI and Responsible Implementation",
-      "AI Strategy and Planning",
+      "AI Strategy Building for Organizations",
       "Change Management for AI Adoption",
       "ROI and Success Metrics"
     ],
@@ -86,18 +86,18 @@
   },
   {
     "Id": 6,
-    "title": "AI for Non-Profits: Getting Started",
-    "description": "Tailored course for non-profit organizations to understand and implement AI solutions that amplify their mission and impact.",
+"title": "AI Policy Building Workshop",
+    "description": "Specialized course for organizations to develop comprehensive AI policies and governance frameworks. Learn to create responsible AI guidelines that align with Canadian regulations and organizational values.",
     "level": "beginner",
     "duration": "2 days",
     "price": 900,
     "topics": [
-      "AI in Non-Profit Context",
-      "Donor Management with AI",
-      "Program Impact Measurement",
-      "Volunteer Engagement Tools",
-      "Grant Writing Assistance",
-      "Budget-Friendly AI Solutions"
+      "AI Policy Framework Development",
+      "Canadian AI Regulation Compliance",
+      "Ethical AI Guidelines",
+      "Risk Assessment and Mitigation",
+      "Stakeholder Engagement Strategies",
+      "Implementation and Monitoring"
     ],
     "nextStartDate": "2024-03-22T09:00:00Z"
   },
@@ -119,19 +119,19 @@
     "nextStartDate": "2024-03-29T09:00:00Z"
   },
   {
-    "Id": 8,
-    "title": "AI Ethics and Governance",
-    "description": "Essential course on implementing ethical AI practices, governance frameworks, and ensuring responsible AI deployment in organizations.",
+"Id": 8,
+    "title": "AI Agents & Chatbots Implementation",
+    "description": "Practical course on designing, building, and deploying AI agents and chatbots for business applications. Learn to create intelligent conversational systems that enhance customer experience and operational efficiency.",
     "level": "intermediate",
-    "duration": "2 days",
-    "price": 1600,
+    "duration": "3 days",
+    "price": 1800,
     "topics": [
-      "AI Ethics Principles",
-      "Bias Detection and Mitigation",
-      "Governance Frameworks",
-      "Regulatory Compliance",
-      "Transparency and Explainability",
-      "Stakeholder Engagement"
+      "AI Agent Architecture Design",
+      "Chatbot Development Frameworks",
+      "Natural Language Understanding",
+      "Integration with Business Systems",
+      "Performance Optimization",
+      "Monitoring and Maintenance"
     ],
     "nextStartDate": "2024-04-05T09:00:00Z"
   }

@@ -47,11 +47,11 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+<Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-google-blue rounded-full flex items-center justify-center">
               <ApperIcon name="Brain" size={20} className="text-white" />
             </div>
-            <span className="text-xl font-normal text-gray-900">AI Solutions</span>
+            <span className="text-xl font-normal text-gray-900">AiBility</span>
           </Link>
           
           {/* Desktop Navigation */}

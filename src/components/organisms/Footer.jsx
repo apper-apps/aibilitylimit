@@ -61,10 +61,10 @@ const Footer = () => {
                 <div className="w-8 h-8 bg-google-blue rounded-full flex items-center justify-center">
                   <ApperIcon name="Brain" size={20} className="text-white" />
                 </div>
-                <span className="text-xl font-medium text-gray-900">AI Solutions</span>
+                <span className="text-xl font-medium text-gray-900">AiBility</span>
               </Link>
               <p className="text-gray-600 text-sm leading-relaxed">
-                Expert AI consultants helping organizations understand, implement, and benefit from artificial intelligence.
+                Expert AI consultants helping organizations understand, implement, and benefit from artificial intelligence across Canada.
               </p>
               <div className="flex space-x-3">
                 {socialLinks.map((link) => (
@@ -117,20 +117,20 @@ const Footer = () => {
             {/* Contact Info */}
             <div>
 <h4 className="font-medium text-gray-900 mb-4">Contact</h4>
-              <div className="space-y-2 text-sm text-gray-600">
-                <div className="flex items-center space-x-2">
+<div className="flex items-center space-x-2">
                   <ApperIcon name="Mail" size={16} />
-                  <span>info@aisolutions.com</span>
+                  <span>info@aibility.ca</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <ApperIcon name="Phone" size={16} />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+1 (416) 555-0123</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <ApperIcon name="MapPin" size={16} />
-                  <span>Mountain View, CA</span>
+                  <span>Toronto, ON, Canada</span>
                 </div>
               </div>
+              <div className="mt-4">
               <div className="mt-4">
                 <Button 
                   variant="outline" 
@@ -147,9 +147,9 @@ const Footer = () => {
         
 {/* Bottom Bar */}
         <div className="py-6 border-t border-gray-200">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+<div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-600 text-sm">
-              © 2024 AI Solutions. All rights reserved.
+              © 2024 AiBility. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">

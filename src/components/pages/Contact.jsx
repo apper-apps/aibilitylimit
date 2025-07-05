@@ -112,15 +112,15 @@ const Contact = () => {
   
   const contactMethods = [
     {
-      icon: 'Mail',
+icon: 'Mail',
       title: 'Email',
-      details: 'info@aibility.pro',
+      details: 'info@aibility.ca',
       description: 'Send us an email anytime'
     },
     {
       icon: 'Phone',
       title: 'Phone',
-      details: '+1 (555) 123-4567',
+      details: '+1 (416) 555-0123',
       description: 'Call us during business hours'
     },
     {
@@ -297,8 +297,8 @@ const Contact = () => {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <Card>
-                <h3 className="text-2xl font-bold text-secondary mb-4">Why Choose AIbility Pro?</h3>
+<Card>
+                <h3 className="text-2xl font-bold text-secondary mb-4">Why Choose AiBility?</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <ApperIcon name="Award" size={20} className="text-primary mt-1" />
