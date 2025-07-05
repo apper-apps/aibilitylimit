@@ -107,21 +107,29 @@ const ContactSection = () => {
   }
   
   return (
-    <section id="contact" className="py-20 bg-surface">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="contact" className="py-24 bg-black relative overflow-hidden">
+      {/* Premium background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-accent/30 to-transparent"></div>
+        <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-accent-blue/20 to-transparent"></div>
+        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-purple/20 to-transparent"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 1 }}
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-black text-secondary mb-6">
-            Ready to Start Your <span className="gradient-text">AI Journey?</span>
+          <h2 className="text-5xl md:text-7xl font-playfair font-bold text-white mb-8 heading-premium">
+            Ready to Start Your <span className="gradient-text-accent">AI Journey?</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get in touch with our AI experts to discuss your organization's needs and 
-            discover how we can help you leverage artificial intelligence for greater impact.
+          <div className="w-32 h-1 bg-gradient-to-r from-accent to-accent-blue mx-auto mb-8"></div>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
+            Connect with our elite AI consultants to explore transformative opportunities and 
+            discover how we can elevate your organization through cutting-edge artificial intelligence solutions.
           </p>
         </motion.div>
         

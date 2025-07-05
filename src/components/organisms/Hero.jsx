@@ -17,105 +17,140 @@ const Hero = () => {
     }
   }
   
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with animated gradient */}
-      <div className="absolute inset-0 hero-gradient"></div>
+return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
+      {/* Animated accent lines */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-30"></div>
+        <div className="absolute top-1/2 right-0 w-full h-px bg-gradient-to-l from-transparent via-accent-blue to-transparent opacity-20"></div>
+        <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-purple to-transparent opacity-25"></div>
+      </div>
       
-      {/* Overlay pattern */}
-      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+      {/* Floating accent elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-20 w-2 h-32 bg-gradient-to-b from-accent to-transparent opacity-40 float-element"></div>
+        <div className="absolute bottom-32 right-32 w-32 h-2 bg-gradient-to-r from-accent-blue to-transparent opacity-30 float-element"></div>
+        <div className="absolute top-1/2 right-20 w-2 h-24 bg-gradient-to-t from-accent-purple to-transparent opacity-35 float-element"></div>
+      </div>
       
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="max-w-5xl mx-auto"
         >
           <motion.h1
-            className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight"
-            initial={{ opacity: 0, y: 50 }}
+            className="text-6xl md:text-8xl font-playfair font-bold text-white mb-8 leading-none tracking-tight text-premium"
+            initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
           >
-Boutique AI Consulting for
-            <span className="block bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-              Forward-Thinking Organizations
+            Premium AI Consulting
+            <span className="block gradient-text-accent mt-4">
+              For Visionary Leaders
             </span>
           </motion.h1>
           
+          <motion.div
+            className="w-24 h-1 bg-gradient-to-r from-accent to-accent-blue mx-auto mb-8"
+            initial={{ width: 0 }}
+            animate={{ width: 96 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          ></motion.div>
+          
           <motion.p
-            className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed font-light"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 1, delay: 0.6 }}
           >
-            Our expert team provides <strong>personalized AI strategy and implementation</strong> 
-            for organizations ready to harness artificial intelligence for meaningful impact and competitive advantage.
+            Transform your organization with <span className="text-white font-medium">bespoke AI solutions</span> 
+            that deliver measurable impact. Our boutique approach ensures personalized attention and 
+            <span className="text-white font-medium"> exceptional results</span>.
           </motion.p>
           
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 1, delay: 0.8 }}
           >
             <Button
               size="xl"
-              variant="primary"
+              variant="premium"
               onClick={scrollToContact}
-              className="shadow-2xl hover:shadow-3xl"
+              className="btn-glow group"
             >
               <ApperIcon name="Calendar" size={20} />
-              Book Free Consultation
+              <span>Book Elite Consultation</span>
+              <ApperIcon name="ArrowRight" size={16} className="group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               size="xl"
-              variant="white"
+              variant="glass"
               onClick={scrollToServices}
-              className="shadow-2xl hover:shadow-3xl"
+              className="btn-glow-blue"
             >
-              <ApperIcon name="ArrowRight" size={20} />
-              Explore Services
+              <ApperIcon name="Sparkles" size={20} />
+              Explore Solutions
             </Button>
           </motion.div>
           
-          {/* Trust indicators */}
+          {/* Premium trust indicators */}
           <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-8 text-white"
+            className="flex flex-col sm:flex-row items-center justify-center gap-12 text-white"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 1, delay: 1 }}
           >
-            <div className="flex items-center gap-2">
-              <ApperIcon name="Users" size={20} className="text-accent" />
-              <span className="text-sm font-medium">50+ Organizations Served</span>
+            <div className="flex items-center gap-3 group">
+              <div className="w-12 h-12 bg-gradient-to-r from-accent to-accent-blue rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <ApperIcon name="Users" size={20} className="text-white" />
+              </div>
+              <div className="text-left">
+                <div className="text-2xl font-bold">50+</div>
+                <div className="text-sm text-gray-400">Elite Clients</div>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <ApperIcon name="Award" size={20} className="text-accent" />
-              <span className="text-sm font-medium">AI Implementation Experts</span>
+            <div className="flex items-center gap-3 group">
+              <div className="w-12 h-12 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <ApperIcon name="Award" size={20} className="text-white" />
+              </div>
+              <div className="text-left">
+                <div className="text-2xl font-bold">95%</div>
+                <div className="text-sm text-gray-400">Success Rate</div>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <ApperIcon name="Zap" size={20} className="text-accent" />
-              <span className="text-sm font-medium">Proven Results</span>
+            <div className="flex items-center gap-3 group">
+              <div className="w-12 h-12 bg-gradient-to-r from-accent-purple to-accent-green rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                <ApperIcon name="Zap" size={20} className="text-white" />
+              </div>
+              <div className="text-left">
+                <div className="text-2xl font-bold">24h</div>
+                <div className="text-sm text-gray-400">Response Time</div>
+              </div>
             </div>
           </motion.div>
         </motion.div>
       </div>
       
-      {/* Scroll indicator */}
+      {/* Premium scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1 }}
+        transition={{ duration: 1, delay: 1.5 }}
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          animate={{ y: [0, 12, 0] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          className="flex flex-col items-center gap-2"
         >
-          <ApperIcon name="ChevronDown" size={24} className="text-white" />
+          <div className="text-xs text-gray-400 uppercase tracking-wider font-medium">Scroll to explore</div>
+          <div className="w-px h-8 bg-gradient-to-b from-accent to-transparent"></div>
+          <ApperIcon name="ChevronDown" size={20} className="text-accent" />
         </motion.div>
       </motion.div>
     </section>

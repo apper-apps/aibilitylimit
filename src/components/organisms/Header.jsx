@@ -37,22 +37,22 @@ const Header = () => {
   }
   
   return (
-    <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg backdrop-blur-md' : 'bg-transparent'
+<motion.header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? 'glass-effect shadow-premium' : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-              <ApperIcon name="Brain" size={24} className="text-white" />
+<Link to="/" className="flex items-center space-x-3 group">
+            <div className="w-12 h-12 bg-gradient-to-br from-black to-gray-800 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
+              <ApperIcon name="Brain" size={28} className="text-white" />
             </div>
-            <span className="text-xl font-bold gradient-text">AIbility Pro</span>
+            <span className="text-2xl font-playfair font-bold text-black">AIbility Pro</span>
           </Link>
           
           {/* Desktop Navigation */}

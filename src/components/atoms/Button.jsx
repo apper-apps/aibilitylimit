@@ -11,14 +11,16 @@ const Button = forwardRef(({
   onClick,
   ...props 
 }, ref) => {
-  const baseClasses = 'font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center gap-2'
+const baseClasses = 'font-medium rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center gap-3 transform hover:scale-[1.02] active:scale-[0.98]'
   
-const variants = {
-    primary: 'bg-gradient-to-r from-primary to-accent text-white hover:from-primary/90 hover:to-accent/90 focus:ring-primary/50 shadow-lg hover:shadow-xl transition-all duration-300',
-    secondary: 'bg-gradient-to-r from-secondary to-primary text-white hover:from-secondary/90 hover:to-primary/90 focus:ring-secondary/50 shadow-lg hover:shadow-xl transition-all duration-300',
-    outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary/30 transition-all duration-200',
-    ghost: 'text-primary hover:bg-primary/10 focus:ring-primary/30 transition-all duration-200',
-    white: 'bg-white text-secondary border border-gray-200 hover:bg-gray-50 hover:border-gray-300 focus:ring-primary/30 shadow-sm hover:shadow-md transition-all duration-200',
+  const variants = {
+    primary: 'bg-gradient-to-r from-black to-gray-800 text-white hover:from-gray-800 hover:to-black focus:ring-black/30 shadow-premium hover:shadow-glow border border-gray-700',
+    premium: 'bg-gradient-to-r from-accent to-accent-blue text-white hover:from-accent/90 hover:to-accent-blue/90 focus:ring-accent/50 shadow-premium hover:shadow-glow',
+    secondary: 'bg-white text-black border-2 border-black hover:bg-black hover:text-white focus:ring-black/30 shadow-lg hover:shadow-premium',
+    outline: 'border-2 border-black text-black hover:bg-black hover:text-white focus:ring-black/30 transition-all duration-300 backdrop-blur-sm',
+    ghost: 'text-black hover:bg-black/10 focus:ring-black/30 transition-all duration-300',
+    white: 'bg-white text-black border border-gray-200 hover:bg-gray-50 hover:border-gray-300 focus:ring-black/20 shadow-lg hover:shadow-premium',
+    glass: 'glass-effect text-white border border-white/20 hover:bg-white/20 focus:ring-white/30 backdrop-blur-xl',
   }
   
   const sizes = {

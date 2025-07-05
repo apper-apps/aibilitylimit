@@ -31,13 +31,18 @@ function App() {
     }
   }, [])
 
-  return (
+return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.3 }}
-      className="min-h-screen bg-background"
+      transition={{ duration: 0.5 }}
+      className="min-h-screen bg-background relative overflow-hidden"
     >
+      {/* Premium background patterns */}
+      <div className="fixed inset-0 pointer-events-none">
+        <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-r from-accent/5 to-accent-blue/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-r from-accent-purple/5 to-accent-green/5 rounded-full blur-3xl"></div>
+      </div>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />

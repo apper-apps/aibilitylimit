@@ -9,23 +9,23 @@ const Card = forwardRef(({
   shadow = 'md',
   ...props 
 }, ref) => {
-const baseClasses = 'bg-surface rounded-2xl border border-gray-100 transition-all duration-300'
+const baseClasses = 'bg-white rounded-2xl border border-gray-100 transition-all duration-500 card-premium'
   
   const paddings = {
-    sm: 'p-4',
-    md: 'p-6',
-    lg: 'p-8',
-    xl: 'p-10',
+    sm: 'p-6',
+    md: 'p-8',
+    lg: 'p-10',
+    xl: 'p-12',
   }
   
   const shadows = {
-    sm: 'shadow-sm',
-    md: 'shadow-md hover:shadow-lg',
-    lg: 'shadow-lg hover:shadow-xl',
-    xl: 'shadow-xl hover:shadow-2xl',
+    sm: 'shadow-lg',
+    md: 'shadow-lg hover:shadow-premium',
+    lg: 'shadow-premium hover:shadow-glow',
+    xl: 'shadow-premium hover:shadow-glow',
   }
   
-  const hoverClasses = hover ? 'hover:-translate-y-1 hover:border-gray-200' : ''
+  const hoverClasses = hover ? 'hover:-translate-y-2 hover:border-gray-200 hover:shadow-premium micro-interaction' : ''
   
   const classes = `${baseClasses} ${paddings[padding]} ${shadows[shadow]} ${hoverClasses} ${className}`
   

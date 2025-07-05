@@ -41,21 +41,23 @@ const ServicesSection = () => {
   }
   
   return (
-    <section id="services" className="py-20 bg-surface">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="services" className="py-24 bg-white relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 1 }}
+          className="text-center mb-20"
         >
-<h2 className="text-4xl md:text-5xl font-black text-secondary mb-6">
-            Boutique <span className="gradient-text">AI Solutions</span>
+          <h2 className="text-5xl md:text-7xl font-playfair font-bold text-black mb-8 heading-premium">
+            Premium <span className="gradient-text-accent">AI Solutions</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our personalized approach ensures every AI solution is carefully crafted to meet your 
-            unique organizational goals, with dedicated expertise and ongoing strategic partnership.
+          <div className="w-32 h-1 bg-gradient-to-r from-accent to-accent-blue mx-auto mb-8"></div>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
+            Our bespoke approach ensures every AI solution is meticulously crafted to exceed your 
+            organizational objectives, delivering unparalleled results through dedicated expertise and strategic excellence.
           </p>
         </motion.div>
         
@@ -68,20 +70,23 @@ const ServicesSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="h-full text-center group">
-                <div className="mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <ApperIcon name={service.icon} size={32} className="text-white" />
+<Card className="h-full text-center group relative overflow-hidden" shadow="lg">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent via-accent-blue to-accent-purple"></div>
+                <div className="mb-8 pt-4">
+                  <div className="w-20 h-20 bg-gradient-to-br from-black to-gray-800 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-premium">
+                    <ApperIcon name={service.icon} size={36} className="text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-secondary mb-3">{service.name}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <h3 className="text-2xl font-playfair font-bold text-black mb-4">{service.name}</h3>
+                  <p className="text-gray-600 mb-8 leading-relaxed">{service.description}</p>
                 </div>
                 
-                <div className="mb-6">
-                  <ul className="space-y-2">
+                <div className="mb-8">
+                  <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <ApperIcon name="Check" size={16} className="text-success mr-2 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-gray-600">
+                        <div className="w-5 h-5 bg-gradient-to-r from-accent to-accent-blue rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                          <ApperIcon name="Check" size={12} className="text-white" />
+                        </div>
                         {feature}
                       </li>
                     ))}
@@ -89,7 +94,7 @@ const ServicesSection = () => {
                 </div>
                 
                 <div className="mt-auto">
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full group-hover:bg-black group-hover:text-white">
                     <ApperIcon name="ArrowRight" size={16} />
                     {service.cta}
                   </Button>

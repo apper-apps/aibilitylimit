@@ -8,6 +8,7 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #fafafa;
 }
 
 .Toastify__toast-container {
@@ -16,70 +17,125 @@ body {
 
 .Toastify__toast {
   font-family: 'Inter', sans-serif;
-  border-radius: 8px;
-  padding: 16px;
+  border-radius: 12px;
+  padding: 20px;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.5;
   max-width: 400px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
 .Toastify__toast--success {
-  background: linear-gradient(135deg, #00C851 0%, #00A043 100%);
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: white;
 }
 
 .Toastify__toast--error {
-  background: linear-gradient(135deg, #FF4444 0%, #CC0000 100%);
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
   color: white;
 }
 
 .Toastify__toast--info {
-  background: linear-gradient(135deg, #33B5E5 0%, #0099CC 100%);
+  background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
   color: white;
 }
 
 .Toastify__progress-bar {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Gradient text utilities */
+/* Premium gradient text utilities */
 .gradient-text {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #ff6b35 0%, #0066ff 50%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+.gradient-text-accent {
+  background: linear-gradient(90deg, #ff6b35 0%, #ffa726 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Glass effect utilities */
+.gradient-text-blue {
+  background: linear-gradient(90deg, #0066ff 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Premium glass effect utilities */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-/* Hero background animation */
+.glass-dark {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Premium hero background */
 .hero-gradient {
-  background: linear-gradient(135deg, #1e293b 0%, #6366f1 50%, #8b5cf6 100%);
-  background-size: 200% 200%;
-  animation: gradientShift 10s ease infinite;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+  position: relative;
 }
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.hero-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 102, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 60% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  animation: float 8s ease-in-out infinite;
 }
 
-/* Shimmer effect for loading states */
+/* Accent line animations */
+.accent-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.accent-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff6b35, transparent);
+  animation: lineSlide 2s ease-in-out infinite;
+}
+
+@keyframes lineSlide {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+/* Premium shimmer effect */
 .shimmer {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
+  animation: shimmer 2s infinite;
 }
 
 @keyframes shimmer {
@@ -87,9 +143,36 @@ html {
   100% { background-position: 200% 0; }
 }
 
-/* Custom scrollbar */
+/* Premium button hover effects */
+.btn-glow:hover {
+  box-shadow: 
+    0 0 20px rgba(255, 107, 53, 0.4),
+    0 10px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.btn-glow-blue:hover {
+  box-shadow: 
+    0 0 20px rgba(0, 102, 255, 0.4),
+    0 10px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Premium card hover effects */
+.card-premium {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-premium:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Premium scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -97,10 +180,57 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0066FF;
-  border-radius: 4px;
+  background: linear-gradient(180deg, #ff6b35 0%, #0066ff 100%);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0052CC;
+  background: linear-gradient(180deg, #e55a2b 0%, #0052cc 100%);
+}
+
+/* Typography enhancements */
+.text-premium {
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.heading-premium {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+/* Floating elements */
+.float-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-element:nth-child(2) {
+  animation-delay: -2s;
+}
+
+.float-element:nth-child(3) {
+  animation-delay: -4s;
+}
+
+/* Premium section dividers */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ff6b35, transparent);
+  margin: 4rem 0;
+}
+
+/* Micro-interactions */
+.micro-interaction {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.micro-interaction:hover {
+  transform: scale(1.02);
+}
+
+.micro-interaction:active {
+  transform: scale(0.98);
 }

@@ -27,22 +27,26 @@ const Footer = () => {
   ]
   
   return (
-    <footer className="bg-secondary text-white">
+<footer className="bg-black text-white relative overflow-hidden">
+      {/* Premium accent lines */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-50"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Newsletter Section */}
-        <div className="py-12 border-b border-gray-700">
+        <div className="py-16 border-b border-gray-800">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Stay Updated on AI Trends</h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Get the latest insights on AI adoption, industry trends, and practical implementation strategies delivered to your inbox.
+            <h3 className="text-3xl font-playfair font-bold mb-6">Stay Ahead of AI Innovation</h3>
+            <p className="text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Receive exclusive insights on AI trends, implementation strategies, and industry breakthroughs 
+              delivered directly to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg border border-gray-600 bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                placeholder="Enter your email address"
+                className="flex-1 px-6 py-4 rounded-xl border border-gray-700 bg-gray-900/50 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent backdrop-blur-sm"
               />
-              <Button variant="primary" size="md">
+              <Button variant="premium" size="md" className="btn-glow">
                 Subscribe
               </Button>
             </div>
